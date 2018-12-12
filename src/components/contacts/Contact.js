@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { Consumer } from "../context";
+import { Consumer } from "../../context";
 
 class Contact extends Component {
   state = {
@@ -11,8 +11,8 @@ class Contact extends Component {
     this.setState({ showContactInfo: !this.state.showContactInfo })
   };
 
-  onDeleteClick = (id, dispath) => {
-    dispath({type: 'DELETE_CONTACT', payload: id});
+  onDeleteClick = (id, dispatch) => {
+    dispatch({type: 'DELETE_CONTACT', payload: id});
   };
 
   render() {
